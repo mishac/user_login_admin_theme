@@ -1,0 +1,6 @@
+services:
+  theme.negotiator.user_login_admin_theme:
+    class: Drupal\user_login_admin_theme\Theme\UserNegotiator
+    arguments: ['@config.factory']
+    tags:
+      - { name: theme_negotiator, priority: 0 }
