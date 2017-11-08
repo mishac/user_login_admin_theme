@@ -1,0 +1,17 @@
+{
+  "name": "mishac/user_login_admin_theme",
+  "description": "Use admin theme on user pages",
+  "type": "drupal-module",
+  "homepage": "https://github.com/mishac/user_login_admin_theme",
+  "authors": [
+    {
+      "name": "Misha Chitharanjan",
+      "email": "mishac@mishac.com",
+      "homepage": "https://mishac.com",
+      "role": "Maintainer"
+    }
+  ],
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": {}
+}
