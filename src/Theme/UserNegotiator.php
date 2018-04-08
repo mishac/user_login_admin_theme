@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\user_login_admin_theme\Theme\UserNegotiator.
- */
-
 namespace Drupal\user_login_admin_theme\Theme;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
@@ -29,7 +24,7 @@ class UserNegotiator implements ThemeNegotiatorInterface, ContainerInjectionInte
   /**
    * {@inheritdoc}
    */
-   public static function create(ContainerInterface $container) {
+  public static function create(ContainerInterface $container) {
     return new static(
       $container->get('config.factory')
     );
@@ -41,8 +36,8 @@ class UserNegotiator implements ThemeNegotiatorInterface, ContainerInjectionInte
   public function applies(RouteMatchInterface $route_match) {
     $route_name = $route_match->getRouteName();
 
-    // Use admin theme for login etc
-    return substr($route_name, 0, 4 ) === 'user' || substr($route_name, 0, 11 ) === 'entity.user';
+    // Use admin theme for login etc.
+    return substr($route_name, 0, 4) === 'user' || substr($route_name, 0, 11) === 'entity.user';
   }
 
   /**
@@ -52,4 +47,5 @@ class UserNegotiator implements ThemeNegotiatorInterface, ContainerInjectionInte
     $config = $this->configFactory->get('system.theme');
     return $config->get('admin');
   }
+
 }
