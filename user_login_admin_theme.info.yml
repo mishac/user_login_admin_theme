@@ -1,5 +1,5 @@
 name: User Login Admin Theme
 type: module
 description: Make user login use admin theme
-core: 8.x
+core_version_requirement: ^8 || ^9
 package: Custom
